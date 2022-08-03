@@ -46,6 +46,7 @@ def signup():
         password = request.form['password']
         date = request.form['date']
         try:
+
             login_session['user'] = auth.create_user_with_email_and_password(email , password)
             user = {"username": username, "email": email , "password" : password , "date" : date }
             db.child("Users").child(login_session['user']['localId']).set(user)
@@ -55,8 +56,20 @@ def signup():
 
     return render_template("signup.html")
 
-@app.route('/signin')
+@app.route('/signin' , methods=['GET', 'POST'])
 def signin():
+    error = ""
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        try:
+            print("1234")
+            login_session['user']=auth.sign_in_with_email_and_password(email , password)
+            print("jda")
+            return redirect(url_for('home'))
+        except :
+            error = "Authentication failed"
+
     return render_template("signin.html")
 
 
