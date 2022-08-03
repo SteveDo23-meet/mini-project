@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">    <meta charset="UTF-8">
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Cabin&family=Edu+QLD+Beginner:wght@500&family=Edu+SA+Beginner:wght@500&family=Edu+TAS+Beginner:wght@500&family=Lato:wght@300&family=Roboto+Mono:wght@200&family=Roboto+Slab:wght@300;400&family=Signika+Negative&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    </style>
+    <link rel="icon" 
+     type="image/png" 
+     href="../static/lol.png">    
+     <title>
+      BestBasketballShop
+    </title>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <a href="{{ url_for('home') }}"><div class="logo"><img src="../static/logo.png" alt="Cinque Terre"alt=""></div></a>
+        <ul class="page-list">
+          <li class="page-items"><a href="{{ url_for('home') }}"> HOME </a></li>
+          <li class="page-items"><a href="{{ url_for('gallery') }}">GALLERY </a></li>
+          <li class="page-items"><a href="#"> EXPLORE </a></li>
+          <li class="page-items"><a href="#"> ABOUT </a></li>
+        </ul>
+        <ul class="search-cart">
+          <li class="search-box">
+            <input type="text" class="search-bar">
+            <button  class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </li>
+          <li class="login"><a href="{{ url_for('signup') }}"><i class="fa-solid fa-circle-user"></i></a></li>
+          <li class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+      </nav>
+      <div class="sidebar">
+        <ul class="social-mdeia-icons">
+          <li class="icons"><a href="https://www.facebook.com/nba"><i class="fa-brands fa-facebook"></i></a></li>
+          <li class="icons"><a href="https://www.twitter.com/nba"><i class="fa-brands fa-twitter"></i></a></li>
+          <li class="icons"><a href="https://www.instagram.com/nba/"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="icons"><a href="https://www.youtube.com/watch?v=__ARpfWJvg4"><i class="fa-brands fa-codepen"></i></a></li>
+        </ul>
+      </div>
+      <div class="main-container">
+        <div class="desc-section">
+          <div class="title">The Best Shop For Basketball Players</div>
+          <div class="desc">If you are a fresh meat and want to start your basketball journey , you got into the right place , we have everything for you : <b>SHOES , JERSEYS , BALLS AND MUSH MORE... 
+          </b></div>
+           <img id = "fb" src = "../static/fingerball.gif" alt="Cinque Terre">
+        
+        <a href="{{ url_for('gallery') }}"><div class = "button"><button>
+      explore more
+    </button></div></a>
+      </div>
+    </div>
+      </div>
+    </main>
+
+    <div class="scroll-bar">
+      <div class="scroll-bar-track">
+        <div class="scroll-bar-thumb"></div>
+      </div>
+    </div>
+    <!-- <a href="{{ url_for('gallery') }}"><button class="button">
+      explore more
+    </button> -->
+  </body>
+</html>
