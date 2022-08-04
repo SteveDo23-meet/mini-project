@@ -31,8 +31,8 @@
         <ul class="page-list">
           <li class="page-items"><a href="{{ url_for('home') }}"> HOME </a></li>
           <li class="page-items"><a href="{{ url_for('gallery') }}">GALLERY </a></li>
-          <li class="page-items"><a href="#"> EXPLORE </a></li>
-          <li class="page-items"><a href="#"> ABOUT </a></li>
+          <li class="page-items"><a href="{{ url_for('news') }}"> NBA News </a></li>
+          <li class="page-items"><a href="{{ url_for('profile') }}"> ABOUT </a></li>
         </ul>
         <ul class="search-cart">
           <li class="search-box">
@@ -71,8 +71,5 @@
         <div class="scroll-bar-thumb"></div>
       </div>
     </div>
-    <!-- <a href="{{ url_for('gallery') }}"><button class="button">
-      explore more
-    </button> -->
   </body>
 </html>

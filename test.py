@@ -63,15 +63,26 @@ def signin():
         email = request.form['email']
         password = request.form['password']
         try:
-            print("1234")
             login_session['user']=auth.sign_in_with_email_and_password(email , password)
-            print("jda")
             return redirect(url_for('home'))
         except :
             error = "Authentication failed"
 
     return render_template("signin.html")
 
+@app.route('/profile')
+def profile():
+    username = db.child("Users").child(login_session['user']['localId']).get().val()['username']
+    return render_template("profile.html",username=username)
+
+
+@app.route('/feedback')
+def feedback():
+    return render_template("feedback.html")
+
+@app.route('/news')
+def news():
+    return render_template("news.html")
 
 
 
